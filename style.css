@@ -1,0 +1,28 @@
+header {
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+main {
+    display:flex;
+    flex-direction: row;
+}
+aside{
+    width: 100px;
+    border: solid 1px;
+}
+.right {
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px;
+    width: 400px;
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    border: solid 1px;
+
+}
