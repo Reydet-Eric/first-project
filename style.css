@@ -8,6 +8,7 @@ header {
     list-style-type: none;
     width: 600px;
     height: 50px;
+    background-color: white;
     position: fixed;
 
 }
