@@ -1,16 +1,32 @@
+:root{
+    --primary-color: color #ffff00;
+}
 header {
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     list-style-type: none;
+    width: 600px;
+    height: 50px;
+    position: fixed;
+
 }
 main {
     display:flex;
     flex-direction: row;
 }
 aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100px;
+    max-height: 800px;
     border: solid 1px;
-}
+    list-style-type: none;
+    align-items: center;
+    margin: 10px;
+    padding:10px;
+   }
 .right {
     display:flex;
     flex-direction: column;
@@ -24,5 +40,10 @@ aside{
     flex-direction: column;
     padding: 10px;
     border: solid 1px;
-
+}
+.notion{
+    padding: 10px;
+}
+.ressenti{
+    padding: 10px;
 }
