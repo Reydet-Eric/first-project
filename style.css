@@ -1,5 +1,5 @@
 :root{
-    --primary-color: color #ffff00;
+    --primary-bg: color #ffff00;
 }
 header {
     display:flex;
@@ -8,9 +8,12 @@ header {
     list-style-type: none;
     width: 600px;
     height: 50px;
+    top:0px;
     background-color: white;
     position: fixed;
     z-index:1;
+    -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+    box-shadow: 5px 5px 15px -3px #000000;
 
 }
 main {
