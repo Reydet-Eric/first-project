@@ -3,7 +3,10 @@
     --menu-one: #ececc6;
     --color-notion:#e7f4ba;
     --color-ressenti:#a7bced;
-    --color-week:#fe6e2b;
+    --color-week:#edc096;
+    --bt-noselect: yellow;
+    --bt-select:red;
+    --bt-mouse:green;
 }
 
 header {
@@ -67,4 +70,27 @@ aside{
 .ressenti{
     padding: 10px;
     background-color: var(--color-ressenti);
+}
+.button-circle{
+    display:block;
+    width:80px;
+    height: 80px;
+    line-height: 80px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#070707;
+    text-align:center;
+    text-decoration:none;
+    background: var(--bt-noselect);
+    font-size:20px;
+    font-weight:bold;
+}
+.button-circle:hover{
+background-color: var(--bt-mouse);
+}
+
+@media screen and (min-width:768px){
+    .right{
+        flex-direction: row;
+    }
 }
