@@ -1,6 +1,8 @@
-:root{
+:root {
     --primary-bg: color #ffff00;
+    --secondary-bg:color #b2daeb;
 }
+
 header {
     display:flex;
     flex-direction: row;
@@ -9,16 +11,17 @@ header {
     width: 600px;
     height: 50px;
     top:0px;
-    background-color: white;
+    background-color: var(--secondary-bg, green);
     position: fixed;
     z-index:1;
-    -webkit-box-shadow: 5px 5px 15px -3px #000000; 
-    box-shadow: 5px 5px 15px -3px #000000;
+    
 
 }
 main {
     display:flex;
     flex-direction: row;
+    top: 50px;
+    background-color: var(--secondary-bg);
 }
 aside{
     display: flex;
@@ -33,6 +36,7 @@ aside{
     align-items: center;
     margin: 10px;
     padding:10px;
+    background-color: var(--primary-bg);
 }
 .right {
     display:flex;
