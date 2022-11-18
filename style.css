@@ -1,28 +1,32 @@
 :root {
-    --primary-bg: color #ffff00;
-    --secondary-bg:color #b2daeb;
+    --bg-one:#c1fdf2;
+    --menu-one: #ececc6;
+    --color-notion:#e7f4ba;
+    --color-ressenti:#a7bced;
+    --color-week:#fe6e2b;
 }
 
 header {
+    
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    width: 600px;
     height: 50px;
+    width:100%;
     top:0px;
-    background-color: var(--secondary-bg, green);
+    font-size: x-large;
+    background-color: var(--bg-one) ;
     position: fixed;
-    z-index:1;
-    
+    z-index: 5;
+    }
 
-}
 main {
     display:flex;
     flex-direction: row;
-    top: 50px;
-    background-color: var(--secondary-bg);
-}
+    font-size: large;   
+    }
+
 aside{
     display: flex;
     flex-direction: column;
@@ -36,15 +40,16 @@ aside{
     align-items: center;
     margin: 10px;
     padding:10px;
-    background-color: var(--primary-bg);
-}
+    background-color: var(--menu-one);
+    }
+
 .right {
     display:flex;
     flex-direction: column;
     margin: 10px;
     padding: 10px;
     border: solid 1px;
-    width: 400px;
+    width: 100%;
     position: relative;
     top:50px;
 }
@@ -53,10 +58,13 @@ aside{
     flex-direction: column;
     padding: 10px;
     border: solid 1px;
+    background-color: var(--color-week);
 }
 .notion{
     padding: 10px;
+    background-color: var(--color-notion);
 }
 .ressenti{
     padding: 10px;
+    background-color: var(--color-ressenti);
 }
