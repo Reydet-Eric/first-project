@@ -15,61 +15,69 @@ header {
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    height: 50px;
-    width:100%;
-    top:0px;
+    height:50px;
+    width:calc(100%-10px);
+    margin:0px 5px 10px 5px;
     font-size: x-large;
-    background-color: var(--bg-one) ;
-    position: fixed;
-    z-index: 5;
-    }
+    background-color: var(--bg-one);
+      }
 
 main {
     display:flex;
     flex-direction: row;
-    font-size: large;   
-    }
+    font-size: large; 
+    
+      }
 
-aside{
-    display: flex;
+nav{
+    position: fixed;
     flex-direction: column;
-    justify-content: space-around;
-    position: sticky;
-    top:100px;
-    width: 100px;
-    max-height: 800px;
+    display:list-item;
+    min-width:100px;   
+    max-height: calc(100vh-60px);
+    height: auto;
     border: solid 1px;
     list-style-type: none;
     align-items: center;
-    margin: 10px;
+    margin: 0px;
     padding:10px;
     background-color: var(--menu-one);
+    border-radius: 10px;
     }
 
 .right {
     display:flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 0px;
     padding: 10px;
     border: solid 1px;
-    width: 100%;
-    position: relative;
-    top:50px;
-}
+    height: auto;
+    width: 80%;
+    text-align: center;
+    border: none;
+    position: absolute;
+    left:50px;
+    }
 .content{
     display:flex;
     flex-direction: column;
+    border-radius: 20%;
     padding: 10px;
+    margin:10px 0 10px 100px;
     border: solid 1px;
     background-color: var(--color-week);
+    border-radius: 10%;
+    box-sizing: border-box;
 }
 .notion{
     padding: 10px;
     background-color: var(--color-notion);
+    border-radius: 10%;
 }
 .ressenti{
     padding: 10px;
     background-color: var(--color-ressenti);
+    border-radius: 25%;
 }
 .button-circle{
     display:block;
