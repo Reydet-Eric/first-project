@@ -1,14 +1,18 @@
 :root {
-    --bg-one:#c1fdf2;
-    --menu-one: #ececc6;
-    --color-notion:#e7f4ba;
-    --color-ressenti:#a7bced;
-    --color-week:#edc096;
-    --bt-noselect: yellow;
-    --bt-select:red;
-    --bt-mouse:green;
+    --bg-one:#e8eceb;
+    --menu-one: #e8eceb;
+    --color-notion:#8cbdb9;
+    --color-ressenti:#2d3e4e;
+    --color-week:#e09e50;
+    --bt-noselect: #8cbdb9;
+    --bt-select:#2d3e4e;
+    --bt-mouse:#e09e50;
+    --bg:#fff5cb;
 }
 
+body{
+background-color: var(--bg);
+}
 header {
     
     display:flex;
@@ -26,8 +30,7 @@ main {
     display:flex;
     flex-direction: row;
     font-size: large; 
-    
-      }
+    }
 
 nav{
     position: fixed;
@@ -78,6 +81,7 @@ nav{
     padding: 10px;
     background-color: var(--color-ressenti);
     border-radius: 25%;
+    color:var(--menu-one);
 }
 .button-circle{
     display:block;
