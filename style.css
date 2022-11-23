@@ -1,14 +1,16 @@
 :root {
     --bg-one:#e8eceb; /* couleur de fond du header*/
-    --menu-one: #e8eceb; /* fond du menu */
+    --menu-one: #ad9ff8; /* fond du menu */
     --color-notion:#8cbdb9; /* code couleur des notions apprises */
     --color-ressenti:#2d3e4e;    /* code couleur du ressenti */
     --color-week:#375572;  /* couleur de fond des cartes */
     --bt-noselect: #8cbdb9;     /* couleur du bouton non-selectionné */
     --bt-select:#2d3e4e;     /* couleur du bouton si selectionné */
-    --bt-mouse:#e09e50;   /* couleur du bouton au survol souris */
+    --bt-mouse:#705ce0;   /* couleur du bouton au survol souris */
     --bg:#cbe3ff;     /* couleur de fond */
-    font-family: DynaPuff; 
+    --color-font-ressenti:#eaeaf9;
+    font-family: DynaPuff; /*choix de la font*/
+    
 }
 
 body {
@@ -93,6 +95,7 @@ nav{
     background-color: var(--color-ressenti);
     border-radius: 25%;
     color:var(--menu-one);
+    color:var(--color-font-ressenti)
 }
 
 /*création des boutons ronds du menu*/
@@ -115,6 +118,7 @@ nav{
 .button-circle:hover {
 background-color: var(--bt-mouse);
 }
+
 
 /*pour les écrans plus grands*/
 @media screen and (min-width:768px) {
