@@ -1,30 +1,33 @@
 :root {
-    --bg-one:#e8eceb;
-    --menu-one: #e8eceb;
-    --color-notion:#8cbdb9;
-    --color-ressenti:#2d3e4e;
-    --color-week:#e09e50;
-    --bt-noselect: #8cbdb9;
-    --bt-select:#2d3e4e;
-    --bt-mouse:#e09e50;
-    --bg:#fff5cb;
+    --bg-one:#e8eceb; /* couleur de fond du header*/
+    --menu-one: #e8eceb; /* fond du menu */
+    --color-notion:#8cbdb9; /* code couleur des notions apprises */
+    --color-ressenti:#2d3e4e;    /* code couleur du ressenti */
+    --color-week:#375572;  /* couleur de fond des cartes */
+    --bt-noselect: #8cbdb9;     /* couleur du bouton non-selectionné */
+    --bt-select:#2d3e4e;     /* couleur du bouton si selectionné */
+    --bt-mouse:#e09e50;   /* couleur du bouton au survol souris */
+    --bg:#cbe3ff;     /* couleur de fond */
+    font-family: DynaPuff; 
 }
 
-body{
+body {
 background-color: var(--bg);
+
 }
+
 header {
-    
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    height:50px;
-    width:calc(100%-10px);
+    height:50px; /* hauteur du header */
+    width:calc(100%-10px); /*prend toute la largeur */
     margin:0px 5px 10px 5px;
     font-size: x-large;
     background-color: var(--bg-one);
-      }
+    
+}
 
 main {
     display:flex;
@@ -32,6 +35,7 @@ main {
     font-size: large; 
     }
 
+/*menu de gauche*/
 nav{
     position: fixed;
     flex-direction: column;
@@ -48,6 +52,7 @@ nav{
     border-radius: 10px;
     }
 
+/*bloc de droite comprenant les differentes cartes*/
 .right {
     display:flex;
     flex-direction: column;
@@ -61,7 +66,9 @@ nav{
     position: absolute;
     left:50px;
     }
-.content{
+
+    /*les cartes*/
+.content {
     display:flex;
     flex-direction: column;
     border-radius: 20%;
@@ -72,18 +79,24 @@ nav{
     border-radius: 10%;
     box-sizing: border-box;
 }
-.notion{
+
+/*ce qui concerne les nouveaux éléments appris*/
+.notion {
     padding: 10px;
     background-color: var(--color-notion);
     border-radius: 10%;
 }
-.ressenti{
+
+/*mon ressenti a moi sur cette semaine*/
+.ressenti {
     padding: 10px;
     background-color: var(--color-ressenti);
     border-radius: 25%;
     color:var(--menu-one);
 }
-.button-circle{
+
+/*création des boutons ronds du menu*/
+.button-circle {
     display:block;
     width:80px;
     height: 80px;
@@ -97,16 +110,22 @@ nav{
     font-size:20px;
     font-weight:bold;
 }
-.button-circle:hover{
+
+/*ce qui se passe quand la souris survole un bouton*/
+.button-circle:hover {
 background-color: var(--bt-mouse);
 }
 
-@media screen and (min-width:768px){
+/*pour les écrans plus grands*/
+@media screen and (min-width:768px) {
 
+    /*j'augmente la taille des cartes*/
     .content{
         width:100%;
         min-height: 600px;
     }
+
+    /*je disposte les cartes sur 2 colonnes au lieu d'une*/
     .right{
         display: grid;
          grid-template-columns: repeat(auto-fit, minmax(600px,1fr));
