@@ -69,7 +69,7 @@ console.log(`bouton submit cliqué\nEtat bdd avant stockage:\n $week`)
 
 })
 
-// ajout d'une bulle dans le menu
+// ajout d'une bulle dans le menu 
 }
 // appeler la fonction nouvelle semaine
 const clickMenuAdd=document.querySelector('#add');
