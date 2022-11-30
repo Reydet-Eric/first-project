@@ -1,14 +1,14 @@
 //structure de mon objet
 const week={name: ["week1"],
-notion:[["notion 1","img"]],
-ressenti:["blabla"]}
+notion:[["Apprendre à apprendre\nC'est quoi être développeur?","img"]],
+ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n"]}
 
 
-/*structure du menu
+//structure du menu
 const menu={name:"menu1",
 lien:href="#week1",
-actif:"oui ou non"}
-*/
+actif:false}
+//
 
 //création du formulaire d'ajout de semaine
 function addWeek(){
@@ -17,6 +17,7 @@ console.log("création du formulaire")
 //variables nécessaires
 const newDivCard=document.createElement('div');
 const classRight=document.querySelector('.right');
+
 //afficher le bloc content
 console.log('create bloc-content');
 newDivCard.classList.add('content');
@@ -56,6 +57,7 @@ const textAreaRessenti=document.createElement('input');
 textAreaRessenti.type="textarea";
 textAreaRessenti.style.height="200px";
 textAreaRessenti.style.width="600px";
+textAreaRessenti.classList.add('textRessenti');
 formSection.appendChild(textAreaRessenti);
 // bouton valider
 const buttonValid=document.createElement('input');
@@ -64,9 +66,12 @@ formSection.appendChild(buttonValid);
 
 //valider le formulaire en stockant les infos
 buttonValid.addEventListener('click',function valid(){
-console.log(`bouton submit cliqué\nEtat bdd avant stockage:\n $week`)
-
-
+console.log("bouton submit cliqué\nEtat bdd avant stockage:\n"+ week)
+const addTextRessenti=document.querySelector('.textRessenti')
+const textRessentiASauvegarder=addTextRessenti.value;
+console.log(textRessentiASauvegarder);
+week.ressenti[numberWeek]=textRessentiASauvegarder;
+console.log("Etat bdd apres stockage:\n"+ week)
 })
 
 // ajout d'une bulle dans le menu 
