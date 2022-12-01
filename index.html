@@ -19,49 +19,65 @@
     <main>       
         
         <section class="right">            <!-- bloc de droite utilisé pour le centrage des éléments-->
-        <section class="content">            <!-- bloc de cartes qui represente chaque semaine -->
-            <section>
-                <h2 id="general">General</h2>
-                Après avoir conduit des trains de marchandises pendant près de 13 ans, j'ai du me réorienter pour raisons médicales.
-                Dur dur de commencer un travail avec un rythme sédentaire quand in a toujours été en décalé .......
-                <br>Je me suis réorienté dans le service Prime. Bonne idée car cela a facilité la transition. Cela a été plus simple de comprendre la rémunération des ADCs en ayant été ADCs...
-                <br>Au bout de 4 ans, j'avais envie de changement et la SNCF a décidé de former des développeurs Web. Pile un métier qui m'inspirait depuis longtemps. Après une sélection, me voici avec 17 nouveaux collègues à la Wild Code School à apprendre un nouveaux métier!!!
+            <section class="content" class="affichage" id="general">            <!-- bloc de cartes qui represente chaque semaine -->
+                <section class="card">
+                    <h2 id="general">General</h2>
+                    Après avoir conduit des trains de marchandises pendant près de 13 ans, j'ai du me réorienter pour raisons médicales.
+                    Dur dur de commencer un travail avec un rythme sédentaire quand in a toujours été en décalé .......
+                    <br>Je me suis réorienté dans le service Prime. Bonne idée car cela a facilité la transition. Cela a été plus simple de comprendre la rémunération des ADCs en ayant été ADCs...
+                    <br>Au bout de 4 ans, j'avais envie de changement et la SNCF a décidé de former des développeurs Web. Pile un métier qui m'inspirait depuis longtemps. Après une sélection, me voici avec 17 nouveaux collègues à la Wild Code School à apprendre un nouveaux métier!!!
+                </section>
             </section>
-        </section>
-        <section class="content">
-            <section>
-                <h2 id="week1">week 1:</h2>
-                <div class="notion">
-                    <ul>
-                        <li>Apprendre à apprendre</li>
-                        <li>Cest quoi être développeur?</li> 
-                    </ul>
-
-                </div>
-                <div class="ressenti">
+            <section class="content" class="affichage" id="addForm">
+                <section class="card">
+                    <h2 id="add">Ajout d'une semaine:</h2>
+                    <div class="notion" class="notionForm">
+                        <label for="notion1">Notion 1  :<br><input id="notion1" required><br></label>
+                        <label for="notion2">Notion 2  :<br><input id="notion2"><br></label>
+                        <label fro="notion3">Notion 3  :<br><input id="notion3"><br></label>
+                    </div>
+                    <div class="ressenti" class="ressentiForm">
+                        <label for="addRessenti">Mon ressenti sur cette semaine: <br>
+                            <textarea cols="40" rows="10" id="addRessenti">
+                            </textarea><br>
+                        </label>
+                        <button type="button" class="submitForm">Ajouter</button>
+                    </div>
+                </section>
+            </section>
+            <section class="content">
+                <section class="card">
+                    <h2 id="week10">week 10:</h2>
+                    <div class="notion">
+                        <ul>
+                            <li>Apprendre à apprendre</li>
+                            <li>Cest quoi être développeur?</li> 
+                        </ul>
+                    </div>
+                    <div class="ressenti">
 Après avoir attendu plusieurs mois, j'y suis enfin !!!! <br>
 J'étais vraiment impatient de commencer cette nouvelle aventure. Un vrai défi tant pour l'apprentissage de nouvelles compétences, que pour la gestion du temps libre à partager entre apprentissage, famille et loisir.
-                </div>
+                    </div>
+                </section>
             </section>
-        </section>
-        <section class="content">
-            <section>
-                <h2 id="week2">week 2:</h2>
-                <div class="notion">
-                    <ul>
-                        <li>Base: la console sous linux <br><img src="/images/terminal.png" alt="terminal linux" width="300px"></li>
-                        <li>GIT /  GITHUB</li>
-                        <li>une IDE : VSCode</li>
-                    </ul>
-                </div>
-                <div class="ressenti">
+            <section class="content">
+                <section class="card">
+                    <h2 id="week20">week 20:</h2>
+                    <div class="notion">
+                        <ul>
+                            <li>Base: la console sous linux <br><img src="/images/terminal.png" alt="terminal linux" width="300px"></li>
+                            <li>GIT /  GITHUB</li>
+                            <li>une IDE : VSCode</li>
+                        </ul>
+                    </div>
+                    <div class="ressenti">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed molestiae alias ut id assumenda quas iusto laborum eveniet harum laudantium, eius consectetur, ducimus, nulla accusantium ipsam hic eaque architecto autem.
-                </div>
+                    </div>
+                </section>
             </section>
-        </section>
         <section class="content">
-            <section>
-                <h2 id="week3">week 3:</h2>
+            <section class="card">
+                <h2 id="week30">week 30:</h2>
                 <div class="notion">
                     <ul>
                         <li>HTML: les bases</li>
@@ -75,8 +91,8 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, unde similique.
             </section>
         </section>
         <section class="content">
-            <section>
-                <h2 id="week4">week 4:</h2>
+            <section class="card">
+                <h2 id="week40">week 40:</h2>
                 <div class="notion">
                     <ul>
                         <li>Découverte de JavaScript</li>
@@ -87,43 +103,19 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint reprehender
                 </div>
             </section>
         </section>
-        <section class="content">
-            <section>
-                <h2 id="week5">week 5:</h2>
-                <div class="notion">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo labore similique omnis porro maxime ullam hic odit quod nisi.
-                </div>
-                <div class="ressenti">
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint reprehenderit, recusandae optio hic autem aspernatur deserunt repudiandae magni ipsa repellat eligendi porro suscipit necessitatibus, illo architecto maiores ab. Error!
-                </div>
-            </section>
-        </section>
-        <section class="content">
-            <section>
-                <h2 id="week6">week 6:</h2>
-                <div class="notion">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo labore similique omnis porro maxime ullam hic odit quod nisi.
-                </div>
-                <div class="ressenti">
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint reprehenderit, recusandae optio hic autem aspernatur deserunt repudiandae magni ipsa repellat eligendi porro suscipit necessitatibus, illo architecto maiores ab. Error!
-                </div>
-            </section>
-        </section>
-        
-        <footer>
+        </section> 
+    <!-- <footer>
             1er projet d'Eric R.
-                </footer>
-    </section>
+    </footer> -->
     <nav> <!--barre de menu située a gauche -->
         <a href="#top" class="button-circle">Top</a>
         <a href="#general" class="button-circle">General</a>
         <a href="#add" class="button-circle" id="add">Add</a>
-        <a href="#week1" class="button-circle">week 1</a>
-        <a href="#week2" class="button-circle">Week 2</a>
-        <a href="#week3" class="button-circle">Week 3</a>
-        <a href="#week4" class="button-circle">Week 4</a>
-        <a href="#week5" class="button-circle">Week 5</a>
-        <a href="#week6" class="button-circle">Week 6</a>
+        <a href="#week10" class="button-circle">week 10</a>
+        <a href="#week20" class="button-circle">Week 20</a>
+        <a href="#week30" class="button-circle">Week 30</a>
+        <a href="#week40" class="button-circle">Week 40</a>
+        
     </nav>
         </main>
     

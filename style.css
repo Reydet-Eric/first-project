@@ -1,5 +1,5 @@
 :root {
-    --bg-one:#e8eceb; /* couleur de fond du header*/
+    --bg-one:#e8e8ec; /* couleur de fond du header*/
     --menu-one: #ad9ff8; /* fond du menu */
     --color-notion:#8cbdb9; /* code couleur des notions apprises */
     --color-ressenti:#2d3e4e;    /* code couleur du ressenti */
@@ -74,7 +74,7 @@ nav{
     }
 
     /*les cartes*/
-.content {
+.card {
     display:flex;
     flex-direction: column;
     border-radius: 20%;
@@ -118,7 +118,7 @@ nav{
     text-align:center;
     text-decoration:none;
     background: var(--bt-noselect);
-    font-size:20px;
+    font-size:15px;
     font-weight:bold;
 }
 
