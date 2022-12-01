@@ -14,39 +14,40 @@ actif:false}
 // affichage des bulles de contenu
 
 const rightSection=document.querySelector('.right');
-
+const contentSection=document.querySelector('.content');
 
 function affich(){
     console.log("affichage des cards");
 for(let i=0;i<week.notion.length;i++){
-// //affichage bloc content
- newContentSection=document.createElement('section');
-newContentSection.classList.add=('content');
+ //affichage bloc content
+newContentSection=document.createElement('section');
+newContentSection.classList.add('content');
 rightSection.appendChild(newContentSection);
 
-const contentSection=document.querySelector('.content');
-newSectionVide=document.createElement('section');
-newSectionVide.classList.add=('card');
-contentSection.appendChild(newSectionVide);
 
-//     //  affichage titre semaine
-//console.log(`affichage de la semaine ${numberWeek}`);
+newSectionCard = document.createElement('section');
+newSectionCard.classList.add('card');
+newContentSection.appendChild(newSectionCard);
 
-newContentH2=document.createElement('h2');
-newContentH2.id=`week i+1`;
-newSectionVide.appendChild(newContentH2);
-newContentH2.innerHTML=`week ${i+1}`;
-//     //  affichage bulle notion
+    //  affichage titre semaine
+ newContentH2=document.createElement('h2');
+ newContentH2.id=`week i+1`;
+ newSectionCard.appendChild(newContentH2);
+ newContentH2.innerHTML=`week ${i+1}`;
+    //  affichage bulle notion
 const divNotion=document.querySelector('.notion');
 divDeNotion=document.createElement('div');
-divDeNotion.classList.add=('notion');
-newContentH2.appendChild(divNotion);
+divDeNotion.classList.add('notion');
+newSectionCard.appendChild(divNotion);
 divNotion.innerHTML=`${week.notion[i]}`;
+    //  affichage bulle ressenti
+const divRessenti=document.querySelector('.ressenti');
+divDeRessenti=document.createElement('div');
+divDeRessenti.classList.add('ressenti');
+newSectionCard.appendChild(divDeRessenti);
+divDeRessenti.innerHTML=`${week.ressenti[i]}`;
 
-
-//     //  affichage bulle ressenti
-
-//     //  affichage des bulles du menu
+     //  affichage des bulles du menu
 
 
  }
