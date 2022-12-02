@@ -1,44 +1,41 @@
 //structure de mon objet
 const week={name: [1,2,3],
-notion:[["Apprendre à apprendre\nC'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"]],
-ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed molestiae alias ut id assumenda quas iusto laborum eveniet harum laudantium, eius consectetur, ducimus, nulla accusantium ipsam hic eaque architecto autem."]}
+notion:[["Apprendre à apprendre","C'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"],["HTML / CSS"]],
+ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","La console, ca me fait pas peur. Git/Github, le principe me parait très clair et très sain comme système de centralisation et de suivi","On est passé un peu vite dessus à mon goût. Je ressens un gros manque de pratique pour être à l'aise avec le CSS"]}
 
 const numberWeek=week.name.length
-//console.log(`${week.name} ${week.notion} ${week.ressenti}`)
-//structure du menu
-// const menu={name:"menu1",
-// lien:href="#week1",
-// actif:false}
 
 // affichage des bulles de contenu
-
-const rightSection=document.querySelector('.right');
-const contentSection=document.querySelector('.content');
 
 function affich(){
     
 for(let i=0;i<week.notion.length;i++){
+
  //affichage bloc content
+const rightSection=document.querySelector('.right'); 
 newContentSection=document.createElement('section');
-newContentSection.classList.add('content');
+
+newContentSection.classList.add('content2');
 rightSection.appendChild(newContentSection);
 
-
+const contentSection=document.querySelector('.content2');
 newSectionCard = document.createElement('section');
-newSectionCard.classList.add('card');
-newContentSection.appendChild(newSectionCard);
-
+newSectionCard.classList.add('card2');
+contentSection.appendChild(newSectionCard);
+// console.log(contentSection);
     //  affichage titre semaine
- newContentH2=document.createElement('h2');
- newContentH2.setAttribute("id",`#week${i+1}`);
- newSectionCard.appendChild(newContentH2);
- newContentH2.innerHTML=`week ${i+1}`;
+const sectionCard=document.querySelector('.card2');
+newContentH2=document.createElement('h2');
+newContentH2.setAttribute("id",`week${i}`);
+newSectionCard.appendChild(newContentH2);
+newContentH2.innerHTML=`week ${i+1}:`;
+
     //  affichage bulle notion
-const divNotion=document.querySelector('.notion');
+const divNotion=document.querySelector('.card2');
 divDeNotion=document.createElement('div');
 divDeNotion.classList.add('notion');
-newSectionCard.appendChild(divNotion);
-divNotion.innerHTML=`${week.notion[i]}`;
+newSectionCard.appendChild(divDeNotion);
+divDeNotion.innerHTML=`${week.notion[i]}`;
     //  affichage bulle ressenti
 divDeRessenti=document.createElement('div');
 divDeRessenti.classList.add('ressenti');
@@ -57,13 +54,10 @@ affich();
  //création du formulaire d'ajout de semaine
 function addWeek(){
 
-
- console.log(`week ${numberWeek}`)
  
 // //valider le formulaire en stockant les infos
 const buttonValid=document.querySelector('.submitForm');
 buttonValid.addEventListener('click',function valid(){
- console.log("bouton submit cliqué\nEtat bdd avant stockage:\n"+ week)
 
 week.name[numberWeek]=numberWeek;
 
@@ -79,8 +73,8 @@ week.name[numberWeek]=numberWeek;
 week.notion[numberWeek]=[Notion1,Notion2,Notion3];
 week.ressenti[numberWeek]=Ressenti;
 
-console.log("Etat bdd apres stockage:\n"+ week)
 
+affich();
 // // suppression du formulaire
  })
 }
