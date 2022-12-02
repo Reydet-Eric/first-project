@@ -22,7 +22,6 @@ const contentSection=document.querySelector('.content2');
 newSectionCard = document.createElement('section');
 newSectionCard.classList.add('card2');
 contentSection.appendChild(newSectionCard);
-// console.log(contentSection);
     //  affichage titre semaine
 const sectionCard=document.querySelector('.card2');
 newContentH2=document.createElement('h2');
