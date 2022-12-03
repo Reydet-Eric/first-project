@@ -3,7 +3,7 @@ const week={name: [1,2,3],
 notion:[["Apprendre à apprendre","C'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"],["HTML / CSS"]],
 ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","La console, ca me fait pas peur. Git/Github, le principe me parait très clair et très sain comme système de centralisation et de suivi","On est passé un peu vite dessus à mon goût. Je ressens un gros manque de pratique pour être à l'aise avec le CSS"]}
 
-const numberWeek=week.name.length
+let numberWeek=week.name.length
 
 // affichage des bulles de contenu
 
@@ -52,7 +52,7 @@ newHref=document.createElement('a');
 newHref.classList.add('button-circle');
 navMenu.appendChild(newHref);
 newHref.innerHTML=`week${i+1}`;
-newHref.setAttribute("href",`#week${i+1}`);
+newHref.setAttribute("href",`#week${i}`);
  }}
 }
 affich();
@@ -71,17 +71,23 @@ const addNotion1=document.querySelector('#notion1');
 const addNotion2=document.querySelector('#notion2');
 const addNotion3=document.querySelector('#notion3');
 const addRessenti=document.querySelector('#addRessenti');
-const Notion1=addNotion1.value;
-const Notion2=addNotion2.value;
-const Notion3=addNotion3.value;
-const Ressenti=addRessenti.value;
+let Notion1=addNotion1.value;
+let Notion2=addNotion2.value;
+let Notion3=addNotion3.value;
+let Ressenti=addRessenti.value;
 week.name[numberWeek]=numberWeek;
 week.notion[numberWeek]=[Notion1,Notion2,Notion3];
 week.ressenti[numberWeek]=Ressenti;
 
+// suppression des champs du formulaire
+addNotion1.value="";
+addNotion2.value="";
+addNotion3.value="";
+addRessenti.value="";
+
+
 
 affich();
-// // suppression du formulaire
 })
 }
      addWeek();
