@@ -11,6 +11,12 @@ function affich(){
     
 for(let i=0;i<week.notion.length;i++){
 
+// test: si la bulle existe, on la recrée pas:
+
+if(!document.querySelector(`#week${i}`)){
+
+
+
  //affichage bloc content
 const rightSection=document.querySelector('.right'); 
 newContentSection=document.createElement('section');
@@ -47,9 +53,10 @@ newHref.classList.add('button-circle');
 navMenu.appendChild(newHref);
 newHref.innerHTML=`week${i+1}`;
 newHref.setAttribute("href",`#week${i+1}`);
- }
+ }}
 }
 affich();
+
  //création du formulaire d'ajout de semaine
 function addWeek(){
 
@@ -75,7 +82,7 @@ week.ressenti[numberWeek]=Ressenti;
 
 affich();
 // // suppression du formulaire
- })
+})
 }
      addWeek();
 
