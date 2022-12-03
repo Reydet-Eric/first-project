@@ -84,9 +84,7 @@ addNotion1.value="";
 addNotion2.value="";
 addNotion3.value="";
 addRessenti.value="";
-
-
-
+numberWeek++
 affich();
 })
 }
