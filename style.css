@@ -28,9 +28,47 @@ header {
     margin:0px 5px 10px 5px;
     font-size: x-large;
     background-color: var(--bg-one);
-    
 }
 
+.content-slide {
+    display:flex;
+    }
+
+#img-un{
+animation-name: slideUn;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+    }
+
+    @keyframes slideUn{
+        0%{
+            transform: translate(0px,0px)
+        }
+        50% {
+            transform: translate(90px,0px)
+        }
+        100%{
+            transform: translate(0px,0px)
+        }
+    }
+
+    #img-deux{
+        animation-name: slidedeux;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+            }
+        
+            @keyframes slidedeux{
+                0%{
+                    transform: translate(0px,0px)
+                }
+                50% {
+                    transform: translate(-135px,0px)
+                }
+                100%{
+                    transform: translate(0px,0px)
+                }
+            }
 main {
     display:flex;
     flex-direction: row;
