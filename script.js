@@ -15,28 +15,28 @@ for(let i=0;i<week.notion.length;i++){
 
 if(!document.querySelector(`#week${i}`)){
 
-
-
  //affichage bloc content
 const rightSection=document.querySelector('.right'); 
 newContentSection=document.createElement('section');
-
-newContentSection.classList.add('content2');
+newContentSection.classList.add('content');
+// newContentSection.classList.add('content2');
 rightSection.appendChild(newContentSection);
 
-const contentSection=document.querySelector('.content2');
+
+let contentSection=document.querySelectorAll(".content");
 newSectionCard = document.createElement('section');
-newSectionCard.classList.add('card2');
-contentSection.appendChild(newSectionCard);
+newSectionCard.classList.add('card');
+// newSectionCard.classList.add('card2');
+contentSection[i+2].appendChild(newSectionCard);
     //  affichage titre semaine
-const sectionCard=document.querySelector('.card2');
+const sectionCard=document.querySelector('.card');
 newContentH2=document.createElement('h2');
 newContentH2.setAttribute("id",`week${i}`);
 newSectionCard.appendChild(newContentH2);
 newContentH2.innerHTML=`week ${i+1}:`;
 
     //  affichage bulle notion
-const divNotion=document.querySelector('.card2');
+const divNotion=document.querySelector('.card');
 divDeNotion=document.createElement('div');
 divDeNotion.classList.add('notion');
 newSectionCard.appendChild(divDeNotion);
@@ -60,8 +60,7 @@ affich();
  //création du formulaire d'ajout de semaine
 function addWeek(){
 
- 
-// //valider le formulaire en stockant les infos
+  //valider le formulaire en stockant les infos
 const buttonValid=document.querySelector('.submitForm');
 buttonValid.addEventListener('click',function valid(){
 
