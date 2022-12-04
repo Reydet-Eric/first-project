@@ -30,6 +30,24 @@ header {
     background-color: var(--bg-one);
 }
 
+.burger{
+    display: flex;
+    flex-direction: column ;
+    width: 30px;
+    margin: auto 10px;
+}
+
+.burger-bar{
+    border: 1px solid;
+    
+    margin:2px;
+    padding:1px;
+}
+
+.hidden{
+display:none
+}
+
 .content-slide {
     display:flex;
     }

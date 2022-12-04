@@ -90,3 +90,11 @@ affich();
 }
      addWeek();
 
+// menu hamburger
+const menuClick=document.querySelector('.burger')
+const navMenu=document.querySelector('nav')
+
+menuClick.addEventListener('click', () =>{
+navMenu.classList.toggle('hidden')
+
+})
