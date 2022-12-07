@@ -10,7 +10,12 @@
     --bg:#cbe3ff;     /* couleur de fond */
     --color-font-ressenti:#eaeaf9;
     font-family: DynaPuff; /*choix de la font*/
-    
+}
+
+h2{
+font-size:2em;
+text-align: center;
+margin-bottom:20px;
 }
 
 body {
@@ -99,13 +104,14 @@ nav{
     position: fixed;
     flex-direction: column;
     display:list-item;
-    min-width:10%;  
-    max-height: calc(100vh-60px);
+    min-width:10%; 
+    max-width: 200px; 
     height: auto;
     border: solid 1px;
     list-style-type: none;
     align-items: center;
     margin: 0px;
+    margin-left:5px;
     padding:0px;
     background-color: var(--menu-one);
     border-radius: 10px;
@@ -158,6 +164,7 @@ width:100%;
     border-radius: 10%;
     text-align: justify;
     font-size:medium;
+    margin:10px 5px;
 }
 
 /*mon ressenti a moi sur cette semaine*/
@@ -167,8 +174,8 @@ width:100%;
     border-radius: 25%;
     color:var(--menu-one);
     color:var(--color-font-ressenti);
-    text-align: justify;
     font-size:medium;
+    margin: 10px 5px;
 }
 
 /*création des boutons ronds du menu*/
@@ -200,15 +207,11 @@ img{
 @media screen and (min-width:768px) {
 
     /*adaptation du header*/
-
     header{
     height: 100px;
     margin:10px 20px 10px 10px;
     font-size: 3em;
     }
-
-   
-
     /*j'augmente la taille des cartes*/
     .content{
         width:100%;
@@ -227,11 +230,16 @@ img{
          margin-left: 100px;
          margin-right: 50px;
     }
-
    
     .card{
         min-height: 400px;
         min-width: 400px;
         margin:20px;
     }
+
+    /*menu afficher en permanence*/
+   nav{
+        width: 120px;
+    } 
+    
 }

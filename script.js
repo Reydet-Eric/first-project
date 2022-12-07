@@ -37,10 +37,12 @@ newContentH2.innerHTML=`week ${i+1}:`;
 
     //  affichage bulle notion
 const divNotion=document.querySelector('.card');
+        //si plusieurs notions: faire plusieurs bulles
+        for(let a=0;a<week.notion[i].length;a++){
 divDeNotion=document.createElement('div');
 divDeNotion.classList.add('notion');
 newSectionCard.appendChild(divDeNotion);
-divDeNotion.innerHTML=`${week.notion[i]}`;
+divDeNotion.innerHTML=`${week.notion[i][a]}`;}
     //  affichage bulle ressenti
 divDeRessenti=document.createElement('div');
 divDeRessenti.classList.add('ressenti');
@@ -95,5 +97,14 @@ const navMenu=document.querySelector('nav')
 
 menuClick.addEventListener('click', () =>{
 navMenu.classList.toggle('hidden')
+
+})
+
+//apparition bulle Add a week
+
+const choixMenu=document.querySelector('#add');
+const cacheAdd=document.querySelector('#addForm')
+choixMenu.addEventListener('click', () =>{
+    cacheAdd.classList.toggle('hidden')
 
 })

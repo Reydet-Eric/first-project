@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "1er projet d'application\r dans le cadre de mon apprentissage avec la Wild Code School, nous devons réaliser un 1er projet pour s'exercer au code.\r J'ai choisi de réaliser une petite gazette de mon experience.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reydet-Eric/first-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reydet-Eric/first-project/issues"
+  },
+  "homepage": "https://github.com/Reydet-Eric/first-project#readme"
+}
