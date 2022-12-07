@@ -1,7 +1,10 @@
 //structure de mon objet
-const week={name: [1,2,3],
-notion:[["Apprendre à apprendre","C'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"],["HTML / CSS"]],
-ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","La console, ca me fait pas peur. Git/Github, le principe me parait très clair et très sain comme système de centralisation et de suivi","On est passé un peu vite dessus à mon goût. Je ressens un gros manque de pratique pour être à l'aise avec le CSS"]}
+// const week={name: [1,2,3],
+// notion:[["Apprendre à apprendre","C'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"],["HTML / CSS"]],
+// ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","La console, ca me fait pas peur. Git/Github, le principe me parait très clair et très sain comme système de centralisation et de suivi","On est passé un peu vite dessus à mon goût. Je ressens un gros manque de pratique pour être à l'aise avec le CSS"]}
+
+import {week} from './mini-bdd.js';
+// let week=bdd;
 
 let numberWeek=week.name.length
 
@@ -16,20 +19,21 @@ for(let i=0;i<week.notion.length;i++){
 if(!document.querySelector(`#week${i}`)){
 
  //affichage bloc content
+let newContentSection;
 const rightSection=document.querySelector('.right'); 
-newContentSection=document.createElement('section');
+newContentSection = document.createElement('section');
 newContentSection.classList.add('content');
-// newContentSection.classList.add('content2');
 rightSection.appendChild(newContentSection);
 
 
-let contentSection=document.querySelectorAll(".content");
+const contentSection=document.querySelectorAll(".content");
+let newSectionCard;
 newSectionCard = document.createElement('section');
 newSectionCard.classList.add('card');
-// newSectionCard.classList.add('card2');
 contentSection[i+2].appendChild(newSectionCard);
     //  affichage titre semaine
 const sectionCard=document.querySelector('.card');
+let newContentH2
 newContentH2=document.createElement('h2');
 newContentH2.setAttribute("id",`week${i}`);
 newSectionCard.appendChild(newContentH2);
@@ -39,17 +43,20 @@ newContentH2.innerHTML=`week ${i+1}:`;
 const divNotion=document.querySelector('.card');
         //si plusieurs notions: faire plusieurs bulles
         for(let a=0;a<week.notion[i].length;a++){
+            let divDeNotion
 divDeNotion=document.createElement('div');
 divDeNotion.classList.add('notion');
 newSectionCard.appendChild(divDeNotion);
 divDeNotion.innerHTML=`${week.notion[i][a]}`;}
     //  affichage bulle ressenti
+    let divDeRessenti
 divDeRessenti=document.createElement('div');
 divDeRessenti.classList.add('ressenti');
 newSectionCard.appendChild(divDeRessenti);
 divDeRessenti.innerHTML=`${week.ressenti[i]}`;
      //  affichage des bulles du menu
 const navMenu=document.querySelector('nav');
+let newHref
 newHref=document.createElement('a');
 newHref.classList.add('button-circle');
 navMenu.appendChild(newHref);
