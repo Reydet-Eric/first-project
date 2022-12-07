@@ -6,7 +6,7 @@
     --color-week:#375572;  /* couleur de fond des cartes */
     --bt-noselect: #8cbdb9;     /* couleur du bouton non-selectionné */
     --bt-select:#2d3e4e;     /* couleur du bouton si selectionné */
-    --bt-mouse:#705ce0;   /* couleur du bouton au survol souris */
+    --bt-mouse:#263d65;   /* couleur du bouton au survol souris */
     --bg:#cbe3ff;     /* couleur de fond */
     --color-font-ressenti:#eaeaf9;
     font-family: DynaPuff; /*choix de la font*/
@@ -41,6 +41,7 @@ header {
     flex-direction: column ;
     width: 30px;
     margin: auto 10px;
+    margin-left:20px;
 }
 
 .burger-bar{
@@ -104,15 +105,13 @@ nav{
     position: fixed;
     flex-direction: column;
     display:list-item;
-    min-width:10%; 
-    max-width: 200px; 
     height: auto;
     border: solid 1px;
     list-style-type: none;
     align-items: center;
     margin: 0px;
     margin-left:5px;
-    padding:0px;
+    padding:5px;
     background-color: var(--menu-one);
     border-radius: 10px;
     }
@@ -238,8 +237,12 @@ img{
     }
 
     /*menu afficher en permanence*/
-   nav{
-        width: 120px;
-    } 
-    
+   
+    .button-circle {
+        width:100px;
+        height: 100px;
+        line-height: 100px;
+        border: 3px solid #f5f5f5;
+        font-size:20px;
+    }
 }
