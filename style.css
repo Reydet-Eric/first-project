@@ -256,7 +256,17 @@ img{
         border: 3px solid #f5f5f5;
         font-size:20px;
     }
-    .hidden{
+    .hidden2{
         display:list-item;
+    }
+    .burger{
+        display:none;
+    }
+    header{
+        justify-content: center;
+        align-items: center;
+    }
+    #img-un, #img-deux, .content-slide{
+        height: 100px;
     }
 }
