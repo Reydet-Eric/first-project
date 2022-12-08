@@ -1,5 +1,16 @@
 
-import {week} from './mini-bdd.js';
+
+    let week={name: [1,2,3],
+    notion:[["Apprendre à apprendre","C'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"],["HTML / CSS"]],
+    ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","La console, ca me fait pas peur. Git/Github, le principe me parait très clair et très sain comme système de centralisation et de suivi","On est passé un peu vite dessus à mon goût. Je ressens un gros manque de pratique pour être à l'aise avec le CSS"]
+};
+
+
+week = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
+// console.log(weekJson);
+
+console.log(week)
+
 
 
 let numberWeek=week.name.length
@@ -7,7 +18,7 @@ let numberWeek=week.name.length
 // affichage des bulles de contenu
 
 function affich(){
-    
+    let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
 for(let i=0;i<week.notion.length;i++){
 
 // test: si la bulle existe, on la recrée pas:
@@ -88,7 +99,11 @@ week.notion[numberWeek]=[notion1,notion2,notion3];
 week.ressenti[numberWeek]=ressenti;
 
 
+console.log("stockage dans localstorage");
+localStorage.setItem("bdd", JSON.stringify(week)); // ecriture dans localstorage
 
+// let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
+console.log(JSON.parse(localStorage.getItem("bdd")));
 // suppression des champs du formulaire
 addNotion1.value="";
 addNotion2.value="";
