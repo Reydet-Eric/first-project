@@ -7,7 +7,7 @@
 
 
 week = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
-// console.log(weekJson);
+
 
 console.log(week)
 
@@ -102,8 +102,9 @@ week.ressenti[numberWeek]=ressenti;
 console.log("stockage dans localstorage");
 localStorage.setItem("bdd", JSON.stringify(week)); // ecriture dans localstorage
 
-// let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
+let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
 console.log(JSON.parse(localStorage.getItem("bdd")));
+week = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
 // suppression des champs du formulaire
 addNotion1.value="";
 addNotion2.value="";
@@ -134,6 +135,8 @@ choixMenu.addEventListener('click', () =>{
     cacheAdd.classList.toggle('hidden')
 
 })
+
+
 
 
 
