@@ -16,7 +16,7 @@ function affich(){
    
 for(let i=0;i<week.notion.length;i++){
 
-// test: si la bulle existe, on la recrée pas:
+// test: si la bulle existe, on ne la recrée pas:
 
 if(!document.querySelector(`#week${i}`)){
 
@@ -112,12 +112,13 @@ affich();
 addWeek();
 
 // menu hamburger
-const menuClick=document.querySelector('.burger')
-const navMenu=document.querySelector('nav')
-
+const menuClick=document.querySelector('.burger');
+const navMenu=document.querySelector('nav');
+const right=document.querySelector('.right');
 menuClick.addEventListener('click', () =>{
-navMenu.classList.toggle('hidden')
-
+navMenu.classList.toggle('hidden');
+if (right.style.marginLeft==="100px"){right.style.marginLeft="0px"
+}else {right.style.marginLeft="100px"};
 })
 
 //apparition bulle Add a week
