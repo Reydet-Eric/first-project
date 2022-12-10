@@ -1,24 +1,19 @@
-
-
     let week={name: [1,2,3],
     notion:[["Apprendre à apprendre","C'est quoi être développeur?"],["Base: la console sous linux","GIT /  GITHUB","une IDE : VSCode"],["HTML / CSS"]],
     ressenti:["Après avoir attendu plusieurs mois, j'y suis enfin !!!! \n","La console, ca me fait pas peur. Git/Github, le principe me parait très clair et très sain comme système de centralisation et de suivi","On est passé un peu vite dessus à mon goût. Je ressens un gros manque de pratique pour être à l'aise avec le CSS"]
 };
+let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
 
-
-week = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
-
-
-console.log(week)
-
-
+if (weekJson!=null) {
+week = {...JSON.parse(localStorage.getItem("bdd"))}; // lecture dans localstorage
+};
 
 let numberWeek=week.name.length
 
 // affichage des bulles de contenu
 
 function affich(){
-    let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
+   
 for(let i=0;i<week.notion.length;i++){
 
 // test: si la bulle existe, on la recrée pas:
@@ -79,7 +74,7 @@ let notion3;
 let ressenti;
  //création du formulaire d'ajout de semaine
 function addWeek(){
-
+  
   //valider le formulaire en stockant les infos
 const buttonValid=document.querySelector('.submitForm');
 buttonValid.addEventListener('click',function valid(){
@@ -102,9 +97,7 @@ week.ressenti[numberWeek]=ressenti;
 console.log("stockage dans localstorage");
 localStorage.setItem("bdd", JSON.stringify(week)); // ecriture dans localstorage
 
-let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
-console.log(JSON.parse(localStorage.getItem("bdd")));
-week = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
+
 // suppression des champs du formulaire
 addNotion1.value="";
 addNotion2.value="";
