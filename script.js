@@ -5,7 +5,7 @@
 let weekJson = JSON.parse(localStorage.getItem("bdd")); // lecture dans localstorage
 
 if (weekJson!=null) {
-week = {...JSON.parse(localStorage.getItem("bdd"))}; // lecture dans localstorage
+week = {...JSON.parse(localStorage.getItem("bdd"))}; // lecture dans localstorage et "addition" de ce qu'il manque
 };
 
 let numberWeek=week.name.length

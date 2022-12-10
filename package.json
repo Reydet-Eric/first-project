@@ -16,10 +16,6 @@
     "url": "https://github.com/Reydet-Eric/first-project/issues"
   },
   "homepage": "https://github.com/Reydet-Eric/first-project#readme",
-  "dependencies": {
-    "fs": "0.0.1-security",
-    "http": "0.0.1-security",
-    "path": "^0.12.7"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
