@@ -86,11 +86,14 @@ const addNotion2=document.querySelector('#notion2');
 const addNotion3=document.querySelector('#notion3');
 const addRessenti=document.querySelector('#addRessenti');
 notion1=addNotion1.value;
-notion2=addNotion2.value;
-notion3=addNotion3.value;
+if(addNotion2.value!=""){notion2=addNotion2.value};
+if(addNotion3.value!=""){notion3=addNotion3.value};
 ressenti=addRessenti.value;
 week.name[numberWeek]=numberWeek;
-week.notion[numberWeek]=[notion1,notion2,notion3];
+if(addNotion2.value=="" && addNotion2.value==""){week.notion[numberWeek]=[notion1];}
+else if (addNotion3.value==""){week.notion[numberWeek]=[notion1,notion2];}
+else if(addNotion2.value==""){week.notion[numberWeek]=[notion1,notion3];}
+else {week.notion[numberWeek]=[notion1,notion2,notion3];}
 week.ressenti[numberWeek]=ressenti;
 
 
